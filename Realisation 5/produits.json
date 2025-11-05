@@ -1,0 +1,10 @@
+[
+  { "nom": "Sac Chanel Classic", "prix": 1200, "image": "images/Sacs Chanel.jpg" },
+  { "nom": "Sac Louis Vuitton Neverfull", "prix": 9500, "image": "images/Louis Vuitton Neverfull.jpg" },
+  { "nom": "Sac Gucci Dionysus", "prix": 8800, "image": "images/Gucci Dionysus.jpg" },
+  { "nom": "Sac Prada Re-Edition", "prix": 7500, "image": "images/Sac Prada Re-Edition.jpg" },
+  { "nom": "Sac Balenciaga Hourglass", "prix": 7000, "image": "images/hourglass.jpg" },
+  { "nom": "Sac Celine Triomphe", "prix": 9500, "image": "images/celine.jpg" },
+  { "nom": "Sac Dior Lady", "prix": 11000, "image": "images/ladydior.jpg" },
+  { "nom": "Sac Hermès Birkin", "prix": 266895, "image": "images/birkin.jpg" }
+]

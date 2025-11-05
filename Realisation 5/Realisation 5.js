@@ -1,12 +1,14 @@
-let produits = [
-  { nom: "Sac Chanel Classic", prix: 12000 ,image : "images/Sacs Chanel.jpg" },
-  { nom: "Sac Louis Vuitton Neverfull", prix: 9500 ,image : "images/Louis Vuitton Neverfull.jpg" },
-  { nom: "Sac Gucci Dionysus", prix: 8800 , image : "images/Gucci Dionysus.jpg"},
-  { nom: "Sac Prada Re-Edition", prix: 7500 , image : "images/Sac Prada Re-Edition.jpg" }
-];
-
 let catalogue = document.getElementById("catalogue");
 let recherche = document.getElementById("recherche");
+let produits = [];
+
+fetch("produits.json")
+  .then(response => response.json())
+  .then(data => {
+    produits = data;
+    afficher(produits);
+  })
+  .catch(error => console.error("Erreur de chargement du fichier JSON :", error));
 
 function afficher(liste) {
   catalogue.innerHTML = "";
@@ -14,13 +16,11 @@ function afficher(liste) {
     catalogue.innerHTML += `
       <div class="card">
         <img src="${p.image}" alt="${p.nom}" width="150">
-        <p>${p.nom} — ${p.prix} dh</p>
+        <p>${p.nom} — ${p.prix} DH</p>
       </div>
     `;
   });
 }
-
-afficher(produits);
 
 recherche.addEventListener("input", () => {
   let mot = recherche.value.toLowerCase();
